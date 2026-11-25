@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: white;
+  color: #172b3d;
+}
+.container-shell {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+.font-serif {
+  font-family: Georgia, "Times New Roman", serif;
+}
+.section-pad {
+  @apply py-20 sm:py-24;
+}
+.eyebrow {
+  @apply text-[10px] font-bold uppercase tracking-[.25em] text-gold-600;
+}
+.form-input {
+  @apply block w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm outline-none focus:border-gold-500 focus:bg-white;
+}
+::selection {
+  background: #b89a63;
+  color: white;
+}
+@media (max-width: 640px) {
+  .container-shell {
+    width: calc(100% - 32px);
+  }
+}
